@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taehyuk Chung > Portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class='nav'>
+        <h1 class='nav-name'>Taehyuk Chung<span class="logo-end1"> ></span><span class="logo-end2">_</span></h1>
+        <ul class='nav-menu'>
+            <li><a href="#proj">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tech">Tech</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="https://blog.naver.com/7374179" target="_blank">Blog</a></li>
+            <li><a href="https://github.com/7374179" target="_blank" class="no-link"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="article">
+        <h3 class="article-mid">Hi, My name is Taehyuk Chung</h3>
+        <h3 class="article-mid">who converts construction insight
+            into innovative coding</h3>
+    </div>
+
+    <div class="projects-container">
+
+    <div class="project-detail-display" id="projectDetailDisplay">
+        <!-- 여기에 자바스크립트를 통해 동적으로 내용이 추가될 것임 -->
+    </div>
+
+    <ul class="projects" data-anchor="projects" id="projects">
+        <li class="project project-1 ripple load-bg" data-project-id="project1">
+            <div class="project-image"></div>
+            <a href="https://github.com/7374179/COMP1800_2022_Fall/tree/main/1800_202230_BBY23" class="project-content"
+                target="_blank">
+                <h3 class="project-title"><span>GAME!!</span></h3>
+                <span class="project-underline"></span>
+                <div class="project-description"><span>Real-time Weather Monitoring System</span></div>
+            </a>
+        </li>
+        <li class="project project-2 ripple load-bg" data-project-id="project2">
+            <div class="project-image"></div>
+            <a href="https://github.com/7374179/COMP2800_2023_Winter-BBY25" class="project-content" target="_blank">
+                <h3 class="project-title"><span>GAME!!</span></h3>
+                <span class="project-underline"></span>
+                <div class="project-description"><span>Real-time Weather Monitoring System</span></div>
+            </a>
+        </li>
+        <li class="project project-3 ripple load-bg" data-project-id="project3">
+            <div class="project-image"></div>
+            <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
+                class="project-content" target="_blank">
+                <h3 class="project-title"><span>GAME!!</span></h3>
+                <span class="project-underline"></span>
+                <div class="project-description"><span>Real-time Weather Monitoring System</span></div>
+            </a>
+        </li>
+        <li class="project project-4 ripple load-bg" data-project-id="project4">
+            <div class="project-image"></div>
+            <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
+                class="project-content" target="_blank">
+                <h3 class="project-title"><span>GAME!!</span></h3>
+                <span class="project-underline"></span>
+                <div class="project-description"><span>Real-time Weather Monitoring System</span></div>
+            </a>
+        </li>
+        <li class="project project-5 ripple load-bg" data-project-id="project5">
+            <div class="project-image"></div>
+            <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
+                class="project-content" target="_blank">
+                <h3 class="project-title"><span>GAME!!</span></h3>
+                <span class="project-underline"></span>
+                <div class="project-description"><span>Real-time Weather Monitoring System</span></div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <script>
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', function () {
+                const projectClone = this.cloneNode(true); // 현재 프로젝트의 복사본 생성
+                const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+
+                projectDetailDisplay.innerHTML = ''; // 기존 내용 초기화
+                projectDetailDisplay.appendChild(projectClone); // 복사본을 큰 화면에 추가
+                projectDetailDisplay.classList.add('active');
+            });
+
+            project.addEventListener('mouseout', function () {
+                const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+                projectDetailDisplay.classList.remove('active');
+                projectDetailDisplay.innerHTML = ''; // 내용 지우기
+            });
+        });
+
+    </script>
+
+
+
+    <div class="about" id="about">
+        <p class="about_title">About<span class="logo-end1"> ></span></p>
+        <p class="about-intro">With a decade of robust experience in the construction industry,
+            I specialized in risk management at refinery plants for four years.
+            Additionally, I honed my leadership skills as a construction manager across diverse landscapes,
+            including the UAE, Iraq, and South Korea, over a span of five years.</p>
+        <p class="about-intro">Transitioning to the dynamic field of Computer Science,
+            I dedicated two years to intensive learning, earning 120 credits.
+            This academic foundation fueled my passion for problem-solving,
+            leading me to tackle 200 challenges on Leetcode and 100 on Baekjoon, a renowned Korean computing platform..
+        </p>
+    </div>
+
+    <div class="tech" id="tech">
+        <p class="tech_title">Tech<span class="logo-end1"> ></span></p>
+        <h2 class="tech_strong">Strong</h2>
+        <p class="tech_strong_contents">
+            Java / Spring / JSP / MySQL / C / C++ / React.js / HTML5 / CSS / R-Studio
+        </p>
+        <h2 class="tech_knowledgeable">Knowledgeable</h2>
+        <p class="tech_knowledgeable_contents">
+            Node.js / Express.js / MongoDB / JSF / JQuery / FirebaseDB / Kotlin /
+        </p>
+        <h2 class="etc">ETC</h2>
+        <p class="etc_contents">
+            Git /
+        </p>
+    </div>
+
+    <div class="awards" id="awards">
+        <p class="awards_title">Award<span class="logo-end1"> ></span></p>
+    </div>
+
+
+</body>
+
+</html>
