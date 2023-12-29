@@ -1,0 +1,349 @@
+html {
+  scroll-behavior: smooth;
+}    
+
+* { 
+  box-sizing: border-box;
+  /* width: 100%; */
+}
+
+body {
+  font-family: 'Im혜민',serif;
+  color: #000
+}
+
+.logo-end1 {
+  color: #6d6769;
+  font-size: 1.1em
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.logo-end2 {
+  /* color: #6d6769; */
+  font-size: 1.3em;
+  animation: blink 1s linear infinite;
+}
+
+ol,ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.nav {
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: auto auto; /* 두 열을 자동 크기로 설정합니다. */
+  align-items: center; /* 세로 방향으로 중앙 정렬 */
+  /* background-color: antiquewhite; */
+  padding: 10px 20px; /* 내부 여백을 추가합니다. */
+  font-size: 1em;
+  font-weight: 800;
+  transition: all ease .5s;
+}
+
+.nav a{
+  margin: 10px;
+  /* font-size: 20px; */
+}
+
+.nav-name {
+  font-size: 2em;
+  font-weight: 800;
+  /* float: left;  */
+  transition: all ease .5s;
+
+  text-align: center;
+}
+
+.nav-menu {
+    float: right;
+  /* display: flex; */
+  list-style-type: none; /* 점 제거 */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.nav-menu li {
+  display: inline; /* 또는 inline-block; 요소들을 가로로 정렬 */
+  margin: 10px;
+  margin-right: 0 12px; /* 요소들 사이의 간격 (조정 가능) */
+  /* padding: 5px; */
+}
+
+.nav-menu a:link, .nav-menu a:visited {
+  color: inherit; /* 현재 색상 유지 */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  text-decoration: underline red;
+}
+
+.no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
+  background-image: none;
+  text-shadow: none
+}
+
+.article {
+  padding: 5em 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: 800;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.article-mid {
+  margin: 25px;
+}
+
+.about{
+  /* width: 70%;
+  margin:auto; */
+  max-width: 790px;
+  margin: 0 auto;
+  /* font-size: 2em; */
+  clear: both; /* 이전 요소의 플로트 영향 제거 */
+
+}
+
+.about_title{
+  font-size: 3.2em;
+  font-weight: 800;
+}
+
+.about-intro{
+  /* margin:auto; */
+  font-size: 1.5em;
+  font-weight: 800;
+
+}
+
+.tech{
+  /* width: 70%;
+  margin:auto; */
+  max-width: 790px;
+  margin: 0 auto
+}
+
+.tech_title{
+  font-size: 3.2em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.awards{
+  /* width: 70%;
+  margin:auto; */
+  max-width: 790px;
+  margin: 0 auto
+}
+
+.awards_title{
+  font-size: 3.2em;
+  font-weight: 800;
+}
+
+.projects {
+  /* position: relative; */
+  /* clear: both */
+  display: flex; /* Flexbox 레이아웃 적용 */
+  overflow-x: auto; /* 수평 스크롤바 추가 */
+  clear: both; /* 기존 float 스타일 제거 */
+  position: relative;
+  margin-bottom: 20px; /* .projects와 .about 사이의 공간 */
+  justify-content: center; /* 수평 중앙 정렬 */
+}
+
+.project {
+  flex: 0 0 auto; 
+  width: 80px; 
+  height: 80px; 
+  position: relative;
+  display: block; /* 블록 레벨 요소로 설정 */
+  margin-right: 0; /* 오른쪽 마진을 제거하여 요소들 사이의 간격을 줄임 */
+  margin-left: 0; /* 왼쪽 마진을 제거하여 요소들 사이의 간격을 줄임 */
+  border: 1px solid #000000; /* 테두리 추가: 굵기는 2px, 스타일은 solid(실선), 색상은 검정 */
+
+}
+
+.projects:after {
+  content: ""
+} 
+
+.project.active .project-content,.project:not(.no-hover):hover .project-content {
+  background-color: rgba(0,0,0,.5);
+  position: relative
+}
+
+.project.active .project-image,.project:not(.no-hover):hover .project-image {
+  filter: blur(3px);
+  -webkit-filter: blur(3px)
+}
+
+.project-circle,.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 0
+}
+
+.project-image {
+  /* width: 200px; */
+  /* height: 150px; */
+  background-size: contain; /* 배경 이미지 크기 조절 */
+  background-position: center; /* 배경 이미지 중앙 정렬 */
+}
+
+/* 대형 이미지 및 상세 정보 표시 영역 */
+.project-detail-display {
+  margin-top: 20px; /* 프로젝트 리스트와의 간격 */
+  width: 300px; /* 이미지 크기 설정 */
+  height: 500px; /* 이미지 크기 설정 */
+  margin-left: auto; /* 왼쪽 마진 자동 조절 */
+  margin-right: auto; /* 오른쪽 마진 자동 조절 */
+  display: flex; /* Flexbox 레이아웃 적용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+.project-detail-display .project-image {
+  width: 300px; /* 더 큰 이미지 크기 설정 */
+  height: 750px; /* 더 큰 이미지 크기 설정 */
+  background-size: contain; /* 이미지가 컨테이너 안에 맞도록 조절 */
+}
+
+
+.project-detail-display.active {
+  display: block; /* 활성화 시 표시 */
+}
+
+.project-circle {
+  display: none
+}
+
+.project .project-circle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  height: 250px;
+  width: 250px
+}
+
+.project-content {
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer
+}
+
+.no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
+  background-image: none;
+  text-shadow: none
+}
+
+.project-title {
+  font-size: 3em;
+  margin: .25em 0;
+  text-align: center;
+  color: #fff;
+  font-size: 2.4em;
+  overflow-y: hidden
+}
+
+.project-underline {
+  border-top: 2px solid #fff;
+  display: block;
+  width: 0;
+  margin: 11px auto;
+  -webkit-transition: all .75s;
+  transition: all .55s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  position: relative
+}
+
+.project-description span,.project-title span {
+  -webkit-transform: translateY(125%);
+  -moz-transform: translateY(125%);
+  -ms-transform: translateY(125%);
+  -o-transform: translateY(125%);
+  transform: translateY(125%);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .45s cubic-bezier(.52,.01,.16,1);
+  -moz-transition: -moz-transform .45s cubic-bezier(.52,.01,.16,1);
+  transition: transform .45s cubic-bezier(.52,.01,.16,1);
+  -webkit-transition-duration: .75s;
+  -moz-transition-duration: .75s;
+  transition-duration: .75s;
+  display: block
+}
+
+.project.active .project-underline,.project:not(.no-hover):hover .project-underline {
+  width: 4.5em;
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s
+}
+
+.project.active .project-description span,.project.active .project-title span,.project:not(.no-hover):hover .project-description span,.project:not(.no-hover):hover .project-title span {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0)
+}
+
+.project-description {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow-y: hidden
+}
+
+.project-description span {
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms
+}
+
+.project-1, .project-2 {
+  /* background-color: #0b2a3e; */
+  /* width: 66.66%; */
+  /* height: 700px */
+}
+
+.project-1.load-bg .project-image {
+  background-image: url(./imgs/1800_1.gif)
+}
+
+.project-2.load-bg .project-image {
+  background-image: url(./imgs/2800_1.gif)
+}
+
+.project-3.load-bg .project-image {
+  background-image: url(./imgs/2522_1.gif) 
+}
+
+.project-4.load-bg .project-image {
+  background-image: url(./imgs/2522_1.gif) 
+}
+
+.project-5.load-bg .project-image {
+  background-image: url(./imgs/2522_1.gif) 
+}
