@@ -96,8 +96,9 @@ ol,ul {
   margin: 0 auto;
   font-size: 2em;
   font-weight: 800;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 80px;
+  /* border: 1px solid black; */
 }
 
 .article-mid {
@@ -151,6 +152,10 @@ ol,ul {
   font-weight: 800;
 }
 
+.projects-container{
+  /* border: 1px solid black */
+}
+
 .projects {
   /* position: relative; */
   /* clear: both */
@@ -171,7 +176,7 @@ ol,ul {
   margin-right: 0; /* 오른쪽 마진을 제거하여 요소들 사이의 간격을 줄임 */
   margin-left: 0; /* 왼쪽 마진을 제거하여 요소들 사이의 간격을 줄임 */
   border: 1px solid #000000; /* 테두리 추가: 굵기는 2px, 스타일은 solid(실선), 색상은 검정 */
-
+  margin-top: 10px;
 }
 
 .projects:after {
@@ -206,24 +211,30 @@ ol,ul {
   background-position: center; /* 배경 이미지 중앙 정렬 */
 }
 
+
+
 /* 대형 이미지 및 상세 정보 표시 영역 */
 .project-detail-display {
   margin-top: 20px; /* 프로젝트 리스트와의 간격 */
-  width: 300px; /* 이미지 크기 설정 */
+  width: 400px; /* 이미지 크기 설정 */
   height: 500px; /* 이미지 크기 설정 */
   margin-left: auto; /* 왼쪽 마진 자동 조절 */
   margin-right: auto; /* 오른쪽 마진 자동 조절 */
   display: flex; /* Flexbox 레이아웃 적용 */
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
+  /* border: 1px solid black; */
+  
 }
 
 .project-detail-display .project-image {
-  width: 300px; /* 더 큰 이미지 크기 설정 */
-  height: 750px; /* 더 큰 이미지 크기 설정 */
+  width: 400px; /* 더 큰 이미지 크기 설정 */
+  height: 500px; /* 더 큰 이미지 크기 설정 */
   background-size: contain; /* 이미지가 컨테이너 안에 맞도록 조절 */
-}
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+  /* border: 1px solid black; */
 
+}
 
 .project-detail-display.active {
   display: block; /* 활성화 시 표시 */
@@ -245,7 +256,7 @@ ol,ul {
   border-radius: 50%;
   background: rgba(255,255,255,.4);
   height: 250px;
-  width: 250px
+  width: 250px;
 }
 
 .project-content {
@@ -254,10 +265,27 @@ ol,ul {
   cursor: pointer
 }
 
+/* 이제 .project 내부의 .project-content, .project-title, .project-description을 숨깁니다. */
+.project .project-content,
+.project .project-title,
+.project .project-description {
+    display: none;
+}
+
+/* .project-detail-display에 표시될 새로운 .project-content-display 클래스에 대한 스타일을 정의합니다. */
+.project-detail-display .project-content-display {
+    /* 스타일링 코드 */
+    display: block; /* 항상 표시 */
+    
+}
+
+
 .no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
   background-image: none;
   text-shadow: none
 }
+
+
 
 .project-title {
   font-size: 3em;
@@ -320,12 +348,6 @@ ol,ul {
 .project-description span {
   -webkit-transition-delay: 50ms;
   transition-delay: 50ms
-}
-
-.project-1, .project-2 {
-  /* background-color: #0b2a3e; */
-  /* width: 66.66%; */
-  /* height: 700px */
 }
 
 .project-1.load-bg .project-image {

@@ -33,6 +33,7 @@
     <div class="projects-container">
 
     <div class="project-detail-display" id="projectDetailDisplay">
+        <img src="./imgs/term1_1.png" alt="Default Image" id="defaultImage">
         <!-- 여기에 자바스크립트를 통해 동적으로 내용이 추가될 것임 -->
     </div>
 
@@ -85,23 +86,33 @@
 </div>
 
     <script>
-        document.querySelectorAll('.project').forEach(project => {
-            project.addEventListener('mouseover', function () {
-                const projectClone = this.cloneNode(true); // 현재 프로젝트의 복사본 생성
-                const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+    document.querySelectorAll('.project').forEach(project => {
+        project.addEventListener('mouseover', function () {
+            const projectClone = this.cloneNode(true); // 현재 프로젝트의 복사본 생성
+            const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+            const defaultImage = document.getElementById('defaultImage');
 
-                projectDetailDisplay.innerHTML = ''; // 기존 내용 초기화
-                projectDetailDisplay.appendChild(projectClone); // 복사본을 큰 화면에 추가
-                projectDetailDisplay.classList.add('active');
-            });
+            if (defaultImage) {
+                defaultImage.style.display = 'none'; // 기본 이미지 숨기기
+            }
 
-            project.addEventListener('mouseout', function () {
-                const projectDetailDisplay = document.getElementById('projectDetailDisplay');
-                projectDetailDisplay.classList.remove('active');
-                projectDetailDisplay.innerHTML = ''; // 내용 지우기
-            });
+            projectDetailDisplay.innerHTML = ''; // 기존 내용 초기화
+            projectDetailDisplay.appendChild(projectClone); // 복사본을 큰 화면에 추가
+            projectDetailDisplay.classList.add('active');
         });
 
+        // project.addEventListener('mouseout', function () {
+        //     const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+        //     const defaultImage = document.getElementById('defaultImage');
+
+        //     projectDetailDisplay.classList.remove('active');
+        //     projectDetailDisplay.innerHTML = ''; // 내용 지우기
+
+        //     if (defaultImage) {
+        //         defaultImage.style.display = 'block'; // 기본 이미지 다시 표시
+        //     }
+        // });
+    });
     </script>
 
 
