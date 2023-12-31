@@ -70,8 +70,8 @@ ol,ul {
   transition: all ease .5s;
 
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 10;
+  margin-bottom: 25px;
   padding-top: 0;
   padding-bottom: 0;
 
@@ -112,7 +112,7 @@ ol,ul {
   margin: 0 auto;
   font-size: 2em;
   font-weight: 800;
-  padding-top: 20px;
+  padding-top: 100px;
   padding-bottom: 100px;
   margin-top: 100px;
   /* border: 1px solid black; */
@@ -129,6 +129,7 @@ ol,ul {
   margin: 0 auto;
   /* font-size: 2em; */
   clear: both; /* 이전 요소의 플로트 영향 제거 */
+
 
 }
 
@@ -309,7 +310,6 @@ ol,ul {
 .project-detail-display .project-content-display {
     /* 스타일링 코드 */
     display: block; /* 항상 표시 */
-    
 }
 
 .no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
@@ -330,15 +330,15 @@ ol,ul {
   display: block;
   width: 0;
   margin: 11px auto;
-  -webkit-transition: all .75s;
+  /* -webkit-transition: all .75s;
   transition: all .55s;
   -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  transition-delay: 0s; */
   position: relative
 }
 
 .project-description span,.project-title span {
-  -webkit-transform: translateY(125%);
+  /* -webkit-transform: translateY(125%);
   -moz-transform: translateY(125%);
   -ms-transform: translateY(125%);
   -o-transform: translateY(125%);
@@ -349,14 +349,14 @@ ol,ul {
   transition: transform .45s cubic-bezier(.52,.01,.16,1);
   -webkit-transition-duration: .75s;
   -moz-transition-duration: .75s;
-  transition-duration: .75s;
+  transition-duration: .75s; */
   display: block
 }
 
 .project.active .project-underline,.project:not(.no-hover):hover .project-underline {
   width: 4.5em;
-  -webkit-transition-delay: .5s;
-  transition-delay: .5s
+  /* -webkit-transition-delay: .5s;
+  transition-delay: .5s */
 }
 
 .project.active ,.project.active .project-title span,.project:not(.no-hover):hover ,.project:not(.no-hover):hover .project-title span {
