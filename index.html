@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Open+Sans" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -32,11 +31,9 @@
     </div>
 
     <div class="projects-container" id="proj">
-
         <div class="project-detail-display" id="projectDetailDisplay">
             <img src="./imgs/term1_11.png" alt="Default Image" id="defaultImage" width="500px" height="500px"
                 border="1">
-            <!-- 여기에 자바스크립트를 통해 동적으로 내용이 추가될 것임 -->
         </div>
 
         <ul class="projects" data-anchor="projects" id="projects">
@@ -119,12 +116,10 @@
                 imageElement.style.maxHeight = '100%'; // div 높이를 초과하지 않도록 설정
                 imageElement.style.objectFit = 'contain'; // 비율 유지하면서 div에 맞추기
 
-
                 // 세부 정보 컨테이너 생성 및 스타일 설정
                 const detailsContainer = document.createElement('div');
                 detailsContainer.style.paddingTop = '0px'; // 적절한 padding 제공
                 detailsContainer.style.paddingLeft = '80px'; // 적절한 padding 제공
-
 
                 // 제목과 설명 추가
                 const titleElement = document.createElement('h3');
@@ -146,7 +141,6 @@
                 // 설명의 글씨 크기를 크게 설정
                 descriptionElement.style.fontSize = '1.8em'; // 예: 설명 글씨 크기를 16px로 설정
                 descriptionElement.style.marginTop = '0.5em';
-
 
                 // project-detail-display에 이미지 추가
                 projectDetailDisplay.appendChild(imageElement);
@@ -172,7 +166,7 @@
                 let target = document.querySelector(this.getAttribute('href'));
 
                 // 네비게이션 바의 높이만큼 스크롤 위치를 조정
-                const navBarHeight = 120; // 네비게이션 바의 높이, 필요에 따라 조정하세요.
+                const navBarHeight = 120; // 네비게이션 바의 높이, 필요에 따라 조정
 
                 // 스크롤 위치 계산
                 const offsetPosition = target.offsetTop - navBarHeight;
@@ -183,10 +177,7 @@
                 });
             });
         });
-
     </script>
-
-
 
     <div class="about" id="about">
         <p class="about_title">About<span class="logo-end1"> ></span></p>
@@ -223,8 +214,5 @@
             없어..ㅠ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </p>
     </div>
-
-
 </body>
-
 </html>
