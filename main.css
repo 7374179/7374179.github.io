@@ -8,8 +8,10 @@ html {
 }
 
 body {
-  font-family: 'Im혜민',serif;
-  color: #000
+  /* font-family: 'Im혜민',serif;
+  color: #000 */
+      font-family: 'Roboto Slab',serif;
+
 }
 
 .logo-end1 {
@@ -43,8 +45,17 @@ ol,ul {
   /* background-color: antiquewhite; */
   padding: 10px 20px; /* 내부 여백을 추가합니다. */
   font-size: 1em;
-  font-weight: 800;
+  /* font-weight: 800; */
   transition: all ease .5s;
+  
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+
 }
 
 .nav a{
@@ -92,12 +103,13 @@ ol,ul {
 .article {
   padding: 5em 0;
   text-align: center;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 800;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  margin-top: 150px;
   /* border: 1px solid black; */
 }
 
@@ -108,7 +120,7 @@ ol,ul {
 .about{
   /* width: 70%;
   margin:auto; */
-  max-width: 790px;
+  max-width: 1000px;
   margin: 0 auto;
   /* font-size: 2em; */
   clear: both; /* 이전 요소의 플로트 영향 제거 */
@@ -116,40 +128,59 @@ ol,ul {
 }
 
 .about_title{
-  font-size: 3.2em;
+  font-size: 5em;
   font-weight: 800;
+  margin-bottom: 50px;
 }
 
 .about-intro{
   /* margin:auto; */
-  font-size: 1.5em;
-  font-weight: 800;
+  font-size: 2em;
+  /* font-weight: 800; */
 
 }
 
 .tech{
   /* width: 70%;
   margin:auto; */
-  max-width: 790px;
+  max-width: 1000px;
   margin: 0 auto
 }
 
 .tech_title{
-  font-size: 3.2em;
+  font-size: 5em;
   font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.tech_strong,.tech_knowledgeable,.etc{
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.tech_strong_contents,.tech_knowledgeable_contents,.etc_contents{
+  font-size: 1.5em;
+  /* font-weight: 800; */
   margin-bottom: 20px;
 }
 
 .awards{
   /* width: 70%;
   margin:auto; */
-  max-width: 790px;
+  max-width: 1000px;
   margin: 0 auto
 }
 
 .awards_title{
-  font-size: 3.2em;
+  font-size: 5em;
   font-weight: 800;
+}
+
+.awards_contents{
+  font-size: 3em;
+  /* font-weight: 800; */
+  margin-bottom: 20px;
 }
 
 .projects-container{
@@ -178,8 +209,6 @@ ol,ul {
   border: 1px solid #000000; /* 테두리 추가: 굵기는 2px, 스타일은 solid(실선), 색상은 검정 */
   margin-top: 20px;
 }
-
-
 
 .projects:after {
   content: ""
@@ -213,21 +242,18 @@ ol,ul {
   background-position: center; /* 배경 이미지 중앙 정렬 */
 }
 
-
-
 /* 대형 이미지 및 상세 정보 표시 영역 */
 .project-detail-display {
   margin-top: 20px; /* 프로젝트 리스트와의 간격 */
-  width: 400px; /* 이미지 크기 설정 */
-  height: 500px; /* 이미지 크기 설정 */
+  width: 800px; /* 이미지 크기 설정 */
+  height: 700px; /* 이미지 크기 설정 */
   margin-left: auto; /* 왼쪽 마진 자동 조절 */
   margin-right: auto; /* 오른쪽 마진 자동 조절 */
   display: flex; /* Flexbox 레이아웃 적용 */
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   /* border: 1px solid black; */
-  
-}
+  }
 
 .project-detail-display .project-image {
   width: 400px; /* 더 큰 이미지 크기 설정 */
@@ -235,7 +261,6 @@ ol,ul {
   background-size: contain; /* 이미지가 컨테이너 안에 맞도록 조절 */
   transition: all 0.3s ease; /* 부드러운 전환 효과 */
   /* border: 1px solid black; */
-
 }
 
 .project-detail-display.active {
@@ -274,8 +299,6 @@ ol,ul {
     /* display: none; */
 }
 
-
-
 /* .project-detail-display에 표시될 새로운 .project-content-display 클래스에 대한 스타일을 정의합니다. */
 .project-detail-display .project-content-display {
     /* 스타일링 코드 */
@@ -283,20 +306,16 @@ ol,ul {
     
 }
 
-
 .no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
   background-image: none;
   text-shadow: none
 }
 
-
-
 .project-title {
-  font-size: 3em;
+  font-size: 1em;
   margin: .25em 0;
   text-align: center;
   color: #fff;
-  font-size: 2.4em;
   overflow-y: hidden
 }
 
