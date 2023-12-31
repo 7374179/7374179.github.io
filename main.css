@@ -10,8 +10,7 @@ html {
 body {
   /* font-family: 'Im혜민',serif;
   color: #000 */
-      font-family: 'Roboto Slab',serif;
-
+  font-family: 'Roboto Slab',serif;
 }
 
 .logo-end1 {
@@ -43,7 +42,7 @@ ol,ul {
   grid-template-columns: auto auto; /* 두 열을 자동 크기로 설정합니다. */
   align-items: center; /* 세로 방향으로 중앙 정렬 */
   /* background-color: antiquewhite; */
-  padding: 10px 20px; /* 내부 여백을 추가합니다. */
+  /* padding: 10px 20px;  */
   font-size: 1em;
   /* font-weight: 800; */
   transition: all ease .5s;
@@ -63,6 +62,7 @@ ol,ul {
   /* font-size: 20px; */
 }
 
+
 .nav-name {
   font-size: 2em;
   font-weight: 800;
@@ -70,6 +70,11 @@ ol,ul {
   transition: all ease .5s;
 
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
 }
 
 .nav-menu {
@@ -105,11 +110,11 @@ ol,ul {
   text-align: center;
   /* max-width: 1200px; */
   margin: 0 auto;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 800;
   padding-top: 20px;
   padding-bottom: 100px;
-  margin-top: 150px;
+  margin-top: 100px;
   /* border: 1px solid black; */
 }
 
@@ -128,14 +133,14 @@ ol,ul {
 }
 
 .about_title{
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 800;
   margin-bottom: 50px;
 }
 
 .about-intro{
   /* margin:auto; */
-  font-size: 2em;
+  font-size: 1.5em;
   /* font-weight: 800; */
 
 }
@@ -148,13 +153,13 @@ ol,ul {
 }
 
 .tech_title{
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .tech_strong,.tech_knowledgeable,.etc{
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -173,18 +178,19 @@ ol,ul {
 }
 
 .awards_title{
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 800;
 }
 
 .awards_contents{
-  font-size: 3em;
+  font-size: 1.5em;
   /* font-weight: 800; */
   margin-bottom: 20px;
 }
 
 .projects-container{
-  /* border: 1px solid black */
+  /* border: 1px solid black; */
+  height: 600px;
 }
 
 .projects {
@@ -245,8 +251,8 @@ ol,ul {
 /* 대형 이미지 및 상세 정보 표시 영역 */
 .project-detail-display {
   margin-top: 20px; /* 프로젝트 리스트와의 간격 */
-  width: 800px; /* 이미지 크기 설정 */
-  height: 700px; /* 이미지 크기 설정 */
+  /* width: 800px; 
+  height: 700px;  */
   margin-left: auto; /* 왼쪽 마진 자동 조절 */
   margin-right: auto; /* 오른쪽 마진 자동 조절 */
   display: flex; /* Flexbox 레이아웃 적용 */
@@ -312,7 +318,7 @@ ol,ul {
 }
 
 .project-title {
-  font-size: 1em;
+  font-size: 0.5em;
   margin: .25em 0;
   text-align: center;
   color: #fff;
@@ -353,7 +359,7 @@ ol,ul {
   transition-delay: .5s
 }
 
-.project.active .project-description span,.project.active .project-title span,.project:not(.no-hover):hover .project-description span,.project:not(.no-hover):hover .project-title span {
+.project.active ,.project.active .project-title span,.project:not(.no-hover):hover ,.project:not(.no-hover):hover .project-title span {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -362,16 +368,20 @@ ol,ul {
 }
 
 .project-description {
+  display: none; /* 요소를 숨깁니다 */
+}
+
+/* .project-description {
   text-align: center;
   color: #fff;
   position: relative;
   overflow-y: hidden
-}
+} */
 
-.project-description span {
+/* .project-description span {
   -webkit-transition-delay: 50ms;
   transition-delay: 50ms
-}
+} */
 
 .project-1.load-bg .project-image {
   background-image: url(./imgs/1800_1.gif)
