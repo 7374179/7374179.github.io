@@ -25,15 +25,17 @@
     </div>
 
     <div class="article">
-        <p class="article-mid">Hi, My name is Taehyuk Chung</p>
-        <p class="article-mid">who converts construction insight
+        <p class="article-mid1">Hi, I'm <b class="article-name">Taehyuk Chung</b></p>
+        <p class="article-mid2">who converts construction insight
             into innovative coding</p>
     </div>
 
+    <hr>
+
     <div class="projects-container" id="proj">
         <div class="project-detail-display" id="projectDetailDisplay">
-            <img src="./imgs/500_390.png" alt="Default Image" id="defaultImage" width="500px" height="390px"
-                border="1">
+            <!-- <img src="./imgs/500_390.png" alt="Default Image" id="defaultImage" width="500px" height="390px"
+                border="1"> -->
         </div>
 
         <ul class="projects" data-anchor="projects" id="projects">
@@ -43,7 +45,8 @@
                     class="project-content" target="_blank">
                     <h3 class="project-title"><span>Teachering</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>This web application, based on a browser, is designed to assist students who need help at school to enhance their academic lifestyle.</span></div>
+                    <div class="project-description"><span>This web application, based on a browser, is designed to
+                            assist students who need help at school to enhance their academic lifestyle.</span></div>
                 </a>
             </li>
             <li class="project project-2 ripple load-bg" data-project-id="project2">
@@ -51,7 +54,9 @@
                 <a href="https://github.com/7374179/COMP2800_2023_Winter-BBY25" class="project-content" target="_blank">
                     <h3 class="project-title"><span>KitchenGenie</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>It is a web application that utilizes AI technology to simplify meal planning and preparation by suggesting recipes based on ingredients available at home.</span></div>
+                    <div class="project-description"><span>It is a web application that utilizes AI technology to
+                            simplify meal planning and preparation by suggesting recipes based on ingredients available
+                            at home.</span></div>
                 </a>
             </li>
             <li class="project project-3 ripple load-bg" data-project-id="project3">
@@ -89,6 +94,15 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 첫 번째 프로젝트 요소 선택
+            var firstProject = document.querySelector('.project');
+            if (firstProject) {
+                // 첫 번째 프로젝트에 마우스오버 이벤트 트리거
+                firstProject.dispatchEvent(new Event('mouseover'));
+            }
+        });
+
         document.querySelectorAll('.project').forEach(project => {
             project.addEventListener('mouseover', function () {
                 const projectDetailDisplay = document.getElementById('projectDetailDisplay');
@@ -136,7 +150,7 @@
                 titleElement.style.marginBottom = '0.5em';
 
                 // 설명의 글씨 크기를 크게 설정
-                descriptionElement.style.fontSize = '1.8em'; 
+                descriptionElement.style.fontSize = '1.8em';
                 descriptionElement.style.marginTop = '0.5em';
 
                 // project-detail-display에 이미지 추가
@@ -157,23 +171,27 @@
         });
 
         document.querySelectorAll('.nav-menu a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    anchor.addEventListener('click', function (e) {
+        // href 속성이 "#"으로 시작하지 않는 링크는 외부 링크로 간주
+        if (!this.getAttribute('href').startsWith('#')) {
+            return; // 외부 링크에 대해서는 기본 동작을 방해하지 않음
+        }
 
-                let target = document.querySelector(this.getAttribute('href'));
+        // 내부 링크에 대해서만 기본 동작 방지 및 스크롤 로직 실행
+        e.preventDefault();
 
-                // 네비게이션 바의 높이만큼 스크롤 위치를 조정
-                const navBarHeight = 90; // 네비게이션 바의 높이, 필요에 따라 조정
+        let target = document.querySelector(this.getAttribute('href'));
+        const navBarHeight = 90; // 네비게이션 바의 높이, 필요에 따라 조정
 
-                // 스크롤 위치 계산
-                const offsetPosition = target.offsetTop - navBarHeight;
+        // 스크롤 위치 계산
+        const offsetPosition = target ? target.offsetTop - navBarHeight : 0;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
         });
+    });
+});
     </script>
 
     <div class="about" id="about">
@@ -212,4 +230,5 @@
         </p>
     </div>
 </body>
+
 </html>
