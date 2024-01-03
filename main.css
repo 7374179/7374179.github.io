@@ -258,6 +258,8 @@ a.project-content {
 .projects-container {
   /* border: 1px solid black; */
   height: 550px;
+  background-color: rgb(248, 245, 245);
+  padding-top:10px
 }
 
 .projects {
@@ -279,6 +281,8 @@ a.project-content {
   margin-left: 0;
   border: 1px solid #000000;
   margin-top: 20px;
+  background-color: white;
+
 }
 
 .projects:after {
