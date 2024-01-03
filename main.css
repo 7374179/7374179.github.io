@@ -1,8 +1,8 @@
 html {
   scroll-behavior: smooth;
-}    
+}
 
-* { 
+* {
   box-sizing: border-box;
 }
 
@@ -13,21 +13,24 @@ a {
 body {
   /* font-family: 'Im혜민',serif;
   color: #000 */
-  font-family: 'Roboto Slab',serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 hr {
   border: none;
-  width: 750px;
+  width: 80%;
   height: 1px;
-  background-color: #cf2121; /* 밑줄 색상 */
-  margin-top: 20px; /* 위 여백 */
-  margin-bottom: 120px; /* 아래 여백 */
+  background-color: #cf2121;
+  /* 밑줄 색상 */
+  margin-top: 20px;
+  /* 위 여백 */
+  margin-bottom: 120px;
+  /* 아래 여백 */
 }
 
 .logo-end1 {
   color: red;
-  font-size: 1.1em
+  font-size: 1.1em;
 }
 
 @keyframes blink {
@@ -39,10 +42,10 @@ hr {
 .logo-end2 {
   font-size: 1.3em;
   animation: blink 1s linear infinite;
-  
 }
 
-ol,ul {
+ol,
+ul {
   list-style: none;
   margin: 0;
   padding: 0
@@ -50,21 +53,21 @@ ol,ul {
 
 .nav {
   display: grid;
-  grid-template-columns: auto auto; 
-  align-items: center; 
+  grid-template-columns: auto auto;
+  align-items: center;
   font-size: 1em;
   transition: all ease .5s;
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 70px;
 }
 
-.nav a{
+.nav a {
   margin: 10px;
   /* font-size: 20px; */
 }
@@ -90,18 +93,24 @@ ol,ul {
 }
 
 .nav-menu li {
-  display: inline; 
+  display: inline;
   margin: 10px;
-  margin-right: 0 12px; 
+  margin-right: 0 12px;
 }
 
-.nav-menu a:link, .nav-menu a:visited {
-  color: inherit; 
-  text-decoration: none; 
+.nav-menu a:link,
+.nav-menu a:visited {
+  color: inherit;
+  text-decoration: none;
   text-decoration: underline red;
 }
 
-.no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
+.no-link,
+.no-link:focus,
+.no-link:hover,
+.project-content:focus,
+.project-content:hover,
+a.project-content {
   background-image: none;
   text-shadow: none
 }
@@ -118,16 +127,16 @@ ol,ul {
   /* border: 1px solid black; */
 }
 
-.article-name{
-  font-size:1.2em;
+.article-name {
+  font-size: 1.2em;
 }
 
-.article-mid1{
+.article-mid1 {
   font-size: 1.4em;
   margin-bottom: 10px;
 }
 
-.article-mid2{
+.article-mid2 {
   /* font-size: 1.4em; */
   margin-top: 5px;
 }
@@ -136,147 +145,160 @@ ol,ul {
   margin: 25px;
 } */
 
-.about{
+.about {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 150px;
-  clear: both; 
+  clear: both;
 }
 
 .about_title {
   font-size: 4em;
   font-weight: 800;
   margin-bottom: 50px;
-  position: relative; /* 가상 요소의 위치 기준점을 설정 */
+  position: relative;
+  /* 가상 요소의 위치 기준점을 설정 */
 }
-
-/* .about_title {
-  font-size: 4em;
-  font-weight: 800;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #000;
-  padding-bottom: 10px; 
-} */
-
 
 .about_title::after {
   content: '';
   display: block;
-  width: 50%; /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
-  height: 3px; /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
-  background-color: #000; /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
+  width: 50%;
+  /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
+  height: 3px;
+  /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
+  background-color: #000;
+  /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
   position: absolute;
-  bottom: -10px; /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
+  bottom: -10px;
+  /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
   left: 0;
 }
 
-.about-intro{
+.about-intro {
   font-size: 1.5em;
 }
 
-.tech{
+.tech {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 150px;
 }
 
-.tech_title{
+.tech_title {
   font-size: 4em;
   font-weight: 800;
   margin-bottom: 20px;
-  position: relative; /* 가상 요소의 위치 기준점을 설정 */
+  position: relative;
+  /* 가상 요소의 위치 기준점을 설정 */
 }
 
 .tech_title::after {
   content: '';
   display: block;
-  width: 35%; /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
-  height: 3px; /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
-  background-color: #000; /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
+  width: 35%;
+  /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
+  height: 3px;
+  /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
+  background-color: #000;
+  /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
   position: absolute;
-  bottom: -10px; /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
+  bottom: -10px;
+  /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
   left: 0;
 }
 
-.tech_strong,.tech_knowledgeable,.etc{
+.tech_strong,
+.tech_knowledgeable,
+.etc {
   font-size: 2.5em;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
-.tech_strong_contents,.tech_knowledgeable_contents,.etc_contents{
+.tech_strong_contents,
+.tech_knowledgeable_contents,
+.etc_contents {
   font-size: 1.5em;
   margin-bottom: 20px;
 }
 
-.awards{
+.awards {
   max-width: 800px;
   margin: 0 auto
 }
 
-.awards_title{
+.awards_title {
   font-size: 4em;
   font-weight: 800;
-  position: relative; /* 가상 요소의 위치 기준점을 설정 */
+  position: relative;
+  /* 가상 요소의 위치 기준점을 설정 */
 }
 
 .awards_title::after {
   content: '';
   display: block;
-  width: 35%; /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
-  height: 3px; /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
-  background-color: #000; /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
+  width: 35%;
+  /* 밑줄의 너비를 조정하려면 이 값을 변경하세요 */
+  height: 3px;
+  /* 밑줄의 두께를 조정하려면 이 값을 변경하세요 */
+  background-color: #000;
+  /* 밑줄의 색상을 조정하려면 이 값을 변경하세요 */
   position: absolute;
-  bottom: -10px; /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
+  bottom: -10px;
+  /* 밑줄의 위치를 조정하려면 이 값을 변경하세요 */
   left: 0;
 }
 
-.awards_contents{
+.awards_contents {
   font-size: 1.5em;
   margin-bottom: 20px;
 }
 
-.projects-container{
+.projects-container {
   /* border: 1px solid black; */
   height: 550px;
 }
 
 .projects {
-  display: flex; 
+  display: flex;
   /* overflow-x: auto; */
-  clear: both; 
+  clear: both;
   position: relative;
   margin-bottom: 20px;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .project {
-  flex: 0 0 auto; 
-  width: 80px; 
-  height: 80px; 
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
   position: relative;
   display: block;
-  margin-right: 0; 
-  margin-left: 0; 
-  border: 1px solid #000000; 
+  margin-right: 0;
+  margin-left: 0;
+  border: 1px solid #000000;
   margin-top: 20px;
 }
 
 .projects:after {
   content: ""
-} 
+}
 
-.project.active .project-content,.project:not(.no-hover):hover .project-content {
-  background-color: rgba(0,0,0,.5);
+.project.active .project-content,
+.project:not(.no-hover):hover .project-content {
+  background-color: rgba(0, 0, 0, .5);
   position: relative
 }
 
-.project.active .project-image,.project:not(.no-hover):hover .project-image {
+.project.active .project-image,
+.project:not(.no-hover):hover .project-image {
   filter: blur(3px);
   -webkit-filter: blur(3px)
 }
 
-.project-circle,.project-image {
+.project-circle,
+.project-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,14 +315,14 @@ ol,ul {
 }
 
 .project-detail-display {
-  margin-top: 20px; 
-  margin-left: auto; 
-  margin-right: auto; 
-  display: flex; 
-  justify-content: center; 
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
   /* border: 1px solid black; */
-  }
+}
 
 .project-detail-display .project-image {
   width: 400px;
@@ -328,7 +350,7 @@ ol,ul {
   transform: translateY(-50%);
   bottom: 0;
   border-radius: 50%;
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, .4);
   height: 250px;
   width: 250px;
 }
@@ -342,10 +364,15 @@ ol,ul {
 }
 
 .project-detail-display .project-content-display {
-    display: block;
+  display: block;
 }
 
-.no-link,.no-link:focus,.no-link:hover,.project-content:focus,.project-content:hover,a.project-content {
+.no-link,
+.no-link:focus,
+.no-link:hover,
+.project-content:focus,
+.project-content:hover,
+a.project-content {
   background-image: none;
   text-shadow: none
 }
@@ -366,11 +393,15 @@ ol,ul {
   position: relative
 }
 
-.project.active .project-underline,.project:not(.no-hover):hover .project-underline {
+.project.active .project-underline,
+.project:not(.no-hover):hover .project-underline {
   width: 4.5em;
 }
 
-.project.active ,.project.active .project-title span,.project:not(.no-hover):hover ,.project:not(.no-hover):hover .project-title span {
+.project.active,
+.project.active .project-title span,
+.project:not(.no-hover):hover,
+.project:not(.no-hover):hover .project-title span {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -391,13 +422,323 @@ ol,ul {
 }
 
 .project-3.load-bg .project-image {
-  background-image: url(./imgs/2522_1.gif) 
+  background-image: url(./imgs/2522_1.gif)
 }
 
 .project-4.load-bg .project-image {
-  background-image: url(./imgs/2522_11.gif) 
+  background-image: url(./imgs/2522_11.gif)
 }
 
 .project-5.load-bg .project-image {
-  background-image: url(./imgs/25212_1.gif) 
+  background-image: url(./imgs/25212_1.gif)
+}
+
+@media all and (max-width: 910px) {
+ 
+  .nav-name {
+    transform: translate(calc(50% - 120px));
+    float: inherit;
+  }
+
+  .nav-menu {
+    display: none
+  }
+
+  .article {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+}
+
+@media all and (max-width: 660px) {
+    .nav {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    font-size: 1em;
+    justify-content: center; 
+  }
+
+  .logo-end1 {
+    display: inline-block;
+  }
+
+  .logo-end2 {
+    display: inline-block;
+  }
+  
+  .article {
+    font-size: 1.5em
+  }
+
+  .projects-container {
+    height: 150px;
+  }
+
+  /* .project-detail-display {
+    display: none;
+  } */
+  
+    .article {
+    font-size: 1em
+  }
+
+  .about {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .about_title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .about-intro {
+    font-size: 1.2em;
+  }
+
+  .tech {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .tech_title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .tech_strong,
+  .tech_knowledgeable,
+  .etc {
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .tech_strong_contents,
+  .tech_knowledgeable_contents,
+  .etc_contents {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .awards {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .awards_title {
+    font-size: 3em;
+    font-weight: 800;
+    position: relative;
+  }
+
+  .awards_contents {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }  
+}
+
+
+@media all and (max-width: 570px) {
+  /* .project {
+    width: 100%
+  } */
+
+  .article {
+    font-size: 1em
+  }
+
+  .about {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .about_title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .about-intro {
+    font-size: 1.2em;
+  }
+
+  .tech {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .tech_title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .tech_strong,
+  .tech_knowledgeable,
+  .etc {
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .tech_strong_contents,
+  .tech_knowledgeable_contents,
+  .etc_contents {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .awards {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    clear: both;
+  }
+
+  .awards_title {
+    font-size: 3em;
+    font-weight: 800;
+    position: relative;
+  }
+
+  .awards_contents {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+
+  .nav{
+    height: 50px;
+    align-items: center;
+    justify-content: center; 
+  }
+  .nav-name {
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center; 
+    float: inherit;
+  }
+
+  .article {
+    padding: 5em 0;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .about {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    clear: both;
+  }
+
+  hr{
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .about_title {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .about-intro {
+    font-size: 1.1em;
+  }
+
+  .projects-container{
+    margin: 0 auto;
+    height:10%;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .projects{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+  }
+ 
+
+  .tech {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    clear: both;
+  }
+
+  .tech_title {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .tech_strong,
+  .tech_knowledgeable,
+  .etc {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  .tech_strong_contents,
+  .tech_knowledgeable_contents,
+  .etc_contents {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+  }
+
+  .awards {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    clear: both;
+  }
+
+  .awards_title {
+    font-size: 2em;
+    font-weight: 800;
+    position: relative;
+  }
+
+  .awards_contents {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .project {
+    position: relative;
+    width: 100%;
+    height: 200px
+  }
 }
