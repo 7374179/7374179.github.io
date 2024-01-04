@@ -30,7 +30,7 @@
             into innovative coding</p>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <div class="projects-container" id="proj">
         <div class="project-detail-display" id="projectDetailDisplay">
@@ -45,8 +45,8 @@
                     class="project-content" target="_blank">
                     <h3 class="project-title"><span>Teachering</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>This web application, based on a browser, is designed to
-                            assist students who need help at school to enhance their academic lifestyle.</span></div>
+                    <div class="project-description"><span>This web application is <strong>designed to
+                            assist<br> students</strong> who need help at school to<br> enhancetheir academic lifestyle.</span></div>
                 </a>
             </li>
             <li class="project project-2 ripple load-bg" data-project-id="project2">
@@ -54,9 +54,10 @@
                 <a href="https://github.com/7374179/COMP2800_2023_Winter-BBY25" class="project-content" target="_blank">
                     <h3 class="project-title"><span>KitchenGenie</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>It is a web application that utilizes AI technology to
-                            simplify meal planning and preparation by suggesting recipes based on ingredients available
-                            at home.</span></div>
+                    <div class="project-description"><span>It is a web application that utilizes <strong>AI technology</strong><br>
+                        to <strong>simplify meal planning and preparation</strong><br>
+                        by suggesting recipes based on <strong>ingredients<br>
+                        available at home</strong>.</span></div>
                 </a>
             </li>
             <li class="project project-3 ripple load-bg" data-project-id="project3">
@@ -65,21 +66,20 @@
                     class="project-content" target="_blank">
                     <h3 class="project-title"><span>Space Invader</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>Defend the galaxy! Play 'Space Invader' now</span></div>
+                    <div class="project-description"><span><strong>Defend the galaxy!</strong><br> Play 'Space Invader' now!!</span></div>
                 </a>
             </li>
             <li class="project project-4 ripple load-bg" data-project-id="project4">
                 <div class="project-image"></div>
-                <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
+                <a href="https://github.com/7374179/Board-for-JavaSpring"
                     class="project-content" target="_blank">
-                    <h3 class="project-title"><span>GAME4</span></h3>
+                    <h3 class="project-title"><span>Community Board</span></h3>
                     <span class="project-underline"></span>
-                    <div class="project-description"><span>Real-time Weather MonReal-time Weather MoReal-time Weather
-                            MoReal-time Weather MoReal-time Weather MoReal-time Weather MoReal-time Weather Moitoring
-                            System</span></div>
+                    <div class="project-description"><span><strong>Provided:</strong><br>
+                        - Register<br> - Login<br> - Bulletin Board<br> - Create & Share<br> - Edit & Update</span></div>
                 </a>
             </li>
-            <li class="project project-5 ripple load-bg" data-project-id="project5">
+            <!-- <li class="project project-5 ripple load-bg" data-project-id="project5">
                 <div class="project-image"></div>
                 <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
                     class="project-content" target="_blank">
@@ -89,16 +89,14 @@
                             MoReal-time Weather MoReal-time Weather MoReal-time Weather Mo-time Weather Monitoring
                             System</span></div>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // 첫 번째 프로젝트 요소 선택
             var firstProject = document.querySelector('.project');
             if (firstProject) {
-                // 첫 번째 프로젝트에 마우스오버 이벤트 트리거
                 firstProject.dispatchEvent(new Event('mouseover'));
             }
         });
@@ -107,95 +105,80 @@
             project.addEventListener('mouseover', function () {
                 const projectDetailDisplay = document.getElementById('projectDetailDisplay');
 
-                // 화면 너비가 660px 이하인 경우, 상세 정보를 숨기고 함수 종료
                 if (window.matchMedia("(max-width: 660px)").matches) {
                     projectDetailDisplay.style.display = 'none';
                     return;
                 } else {
-                    // 화면이 660px 이상일 경우, 상세 정보를 표시
                     projectDetailDisplay.style.display = 'block';
                 }
 
                 const defaultImage = document.getElementById('defaultImage');
                 if (defaultImage) {
-                    defaultImage.style.display = 'none'; // 기본 이미지 숨기기
+                    defaultImage.style.display = 'none'; 
                 }
 
-                projectDetailDisplay.innerHTML = ''; // 기존 내용 초기화
-                projectDetailDisplay.style.height = '400px'; // 설정된 높이에 맞추기
-                projectDetailDisplay.style.width = '100%'; // 설정된 너비에 맞추기
+                projectDetailDisplay.innerHTML = ''; 
+                projectDetailDisplay.style.height = '400px'; 
+                projectDetailDisplay.style.width = '100%'; 
 
-
-                // 배경 이미지 URL 추출
                 const bgImageStyle = window.getComputedStyle(this.querySelector('.project-image')).backgroundImage;
                 const bgImageUrl = bgImageStyle.slice(4, -1).replace(/"/g, ""); // "url()" 부분 제거
 
-                // 이미지 요소 생성 및 스타일 설정
                 const imageElement = document.createElement('img');
                 imageElement.src = bgImageUrl;
                 imageElement.alt = "Project Image";
-                imageElement.style.maxWidth = '100%'; // div 너비를 초과하지 않도록 설정
-                imageElement.style.maxHeight = '100%'; // div 높이를 초과하지 않도록 설정
-                imageElement.style.objectFit = 'contain'; // 비율 유지하면서 div에 맞추기
+                imageElement.style.maxWidth = '100%'; 
+                imageElement.style.maxHeight = '100%'; 
+                imageElement.style.objectFit = 'contain'; 
+                imageElement.style.border = '1px solid black';
 
-                // 세부 정보 컨테이너 생성 및 스타일 설정
                 const detailsContainer = document.createElement('div');
-                detailsContainer.style.paddingTop = '0px'; // 적절한 padding 제공
-                detailsContainer.style.paddingLeft = '80px'; // 적절한 padding 제공
+                detailsContainer.style.paddingTop = '0px';
+                detailsContainer.style.paddingLeft = '30px';
 
-                // 제목과 설명 추가
                 const titleElement = document.createElement('h3');
                 const descriptionElement = document.createElement('p');
                 titleElement.textContent = this.querySelector('.project-title span').textContent;
-                descriptionElement.textContent = this.querySelector('.project-description span').textContent;
+                descriptionElement.innerHTML = this.querySelector('.project-description span').innerHTML;
                 titleElement.style.marginBottom = '0.5em';
                 descriptionElement.style.marginTop = '0.5em';
 
-                // 세부 정보 컨테이너에 제목과 설명 추가
                 detailsContainer.appendChild(titleElement);
                 detailsContainer.appendChild(descriptionElement);
 
-                // 제목의 글씨 크기를 크게 설정
-                titleElement.style.fontSize = '3em';
+                titleElement.style.fontSize = '2.3em';
                 titleElement.style.marginTop = '0';
                 titleElement.style.marginBottom = '0.5em';
 
-                // 설명의 글씨 크기를 크게 설정
                 descriptionElement.style.fontSize = '1.8em';
                 descriptionElement.style.marginTop = '0.5em';
 
-                // project-detail-display에 이미지 추가
                 projectDetailDisplay.appendChild(imageElement);
 
-                // project-detail-display에 세부 정보 컨테이너 추가
                 projectDetailDisplay.appendChild(detailsContainer);
 
-                // Flexbox 스타일 적용
                 projectDetailDisplay.style.display = 'flex';
-                projectDetailDisplay.style.alignItems = 'flex-start'; // 항목들을 위쪽으로 정렬
+                projectDetailDisplay.style.alignItems = 'flex-start'; 
                 projectDetailDisplay.style.justifyContent = 'flex-start';
                 projectDetailDisplay.classList.add('active');
-                projectDetailDisplay.style.flexDirection = 'row'; // 항목들을 가로로 나란히 배열
-                projectDetailDisplay.style.maxWidth = '1000px'; // 최대 너비 설정
-                projectDetailDisplay.style.margin = 'auto'; // 좌우 중앙 정렬
+                projectDetailDisplay.style.flexDirection = 'row'; 
+                projectDetailDisplay.style.maxWidth = '1000px';
+                projectDetailDisplay.style.margin = 'auto'; 
 
             });
         });
 
         document.querySelectorAll('.nav-menu a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // href 속성이 "#"으로 시작하지 않는 링크는 외부 링크로 간주
                 if (!this.getAttribute('href').startsWith('#')) {
-                    return; // 외부 링크에 대해서는 기본 동작을 방해하지 않음
+                    return; 
                 }
 
-                // 내부 링크에 대해서만 기본 동작 방지 및 스크롤 로직 실행
                 e.preventDefault();
 
                 let target = document.querySelector(this.getAttribute('href'));
-                const navBarHeight = 90; // 네비게이션 바의 높이, 필요에 따라 조정
+                const navBarHeight = 90;
 
-                // 스크롤 위치 계산
                 const offsetPosition = target ? target.offsetTop - navBarHeight : 0;
 
                 window.scrollTo({
@@ -209,24 +192,19 @@
             const projectDetailDisplay = document.getElementById('projectDetailDisplay');
             const firstProject = document.querySelector('.project');
 
-            // 화면 너비가 660px 이하인 경우, 상세 정보를 숨김
             if (window.innerWidth <= 660) {
                 projectDetailDisplay.style.display = 'none';
             } else {
-                // 화면이 660px 이상일 경우, 상세 정보를 표시
                 projectDetailDisplay.style.display = 'block';
 
-                // 첫 번째 프로젝트에 대한 상세 정보를 업데이트
                 if (firstProject) {
                     firstProject.dispatchEvent(new Event('mouseover'));
                 }
             }
         }
 
-        // 창 크기 변경 시 이벤트 리스너
         window.addEventListener('resize', updateProjectDetails);
 
-        // 초기 로드 시 한 번 실행하여 적절한 상태를 설정
         updateProjectDetails();
     </script>
 
@@ -247,11 +225,12 @@
         <p class="tech_title">Skills<span class="logo-end1"> ></span></p>
         <p class="tech_strong">Strong</p>
         <p class="tech_strong_contents">
-            Java / Spring / JSP / MySQL / C / C++ / React.js / HTML5 / CSS / R-Studio
+            Java / Spring / JSP / MySQL / C / C++ / React.js / HTML5 / CSS / R-Studio / Bootstrap
+            / JavaScript / Kotlin 
         </p>
         <p class="tech_knowledgeable">Knowledgeable</p>
         <p class="tech_knowledgeable_contents">
-            Node.js / Express.js / MongoDB / JSF / JQuery / FirebaseDB / Kotlin /
+            Node.js / Express.js / MongoDB / JSF / JQuery / FirebaseDB / Python 
         </p>
         <p class="etc">ETC</p>
         <p class="etc_contents">
@@ -261,9 +240,9 @@
 
     <div class="awards" id="awards">
         <p class="awards_title">Award<span class="logo-end1"> ></span></p>
-        <p class="awards_contents">...ㅠ
-            없어..ㅠ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </p>
+        <p class="awards_contents">100 Days Badge for Consistency</p>
+        <p class="awards_contents-detail">23.12.16 / Daily Commitment / Leetcode</p>
+        <br><br><br>
     </div>
 </body>
 
