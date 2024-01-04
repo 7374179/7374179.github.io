@@ -244,15 +244,9 @@ a.project-content {
   margin-bottom: 20px;
 }
 
-/* .award-item {
-  display: flex;
-  align-items: center; 
-} */
-
 .award-badge {
   margin-right: 10px; 
 }
-
 
 .projects-container {
   height: 520px;
@@ -536,8 +530,14 @@ a.project-content {
   }
 
   .awards_contents {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    /* font-weight: 800; */
+    margin-bottom: 15px;
+  }
+
+  .awards_contents-detail {
+    font-size: 1em;
+    margin-bottom: 15px;
   }
 }
 
@@ -607,8 +607,13 @@ a.project-content {
   }
 
   .awards_contents {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .awards_contents-detail {
+    font-size: 1em;
+    margin-bottom: 15px;
   }
 }
 
@@ -732,7 +737,12 @@ a.project-content {
   }
 
   .awards_contents {
-    font-size: 1em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .awards_contents-detail {
+    font-size: 0.8em;
+    margin-bottom: 15px;
   }
 }
