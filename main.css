@@ -244,6 +244,16 @@ a.project-content {
   margin-bottom: 20px;
 }
 
+/* .award-item {
+  display: flex;
+  align-items: center; 
+} */
+
+.award-badge {
+  margin-right: 10px; 
+}
+
+
 .projects-container {
   height: 520px;
   background-color: rgb(248, 245, 245);
