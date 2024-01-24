@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Open+Sans" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://coreui.io/css/all.min.04afe194583853dbc897278f1cd35603f76521c9272735b5c39cc8a10f3e6adf.css" rel="stylesheet" > -->
+
 </head>
 
 <body>
@@ -21,6 +23,7 @@
             <li><a href="https://blog.naver.com/7374179" target="_blank">Blog</a></li>
             <li class="nav-git"><a href="https://github.com/7374179" target="_blank" class="no-link"><i class="fab fa-github"></i></a>
             <li class="nav-in"><a href="https://www.linkedin.com/in/taehyuk-chung-952561252/" target="_blank" class="no-link"><i class="fab fa-linkedin"></i></a>
+            <!-- <li class="nav-in"><a href="https://leetcode.com/7374179/" target="_blank" class="no-link"><i class="fab cib-leetcode"></i></a> -->
         </li>
         </ul>
     </div>
@@ -132,6 +135,7 @@
                 imageElement.style.maxHeight = '100%'; 
                 imageElement.style.objectFit = 'contain'; 
                 imageElement.style.border = '1px solid black';
+                imageElement.style.borderRadius = '10px'; // 이미지를 둥글게 하는 스타일 추가
 
                 const detailsContainer = document.createElement('div');
                 detailsContainer.style.paddingTop = '0px';
@@ -141,8 +145,8 @@
                 const descriptionElement = document.createElement('p');
                 titleElement.textContent = this.querySelector('.project-title span').textContent;
                 descriptionElement.innerHTML = this.querySelector('.project-description span').innerHTML;
-                titleElement.style.marginBottom = '0.5em';
-                descriptionElement.style.marginTop = '0.5em';
+                // titleElement.style.marginBottom = '0.5em';   // 중복인듯?
+                // descriptionElement.style.marginTop = '0.5em';   // 중복인듯?
 
                 detailsContainer.appendChild(titleElement);
                 detailsContainer.appendChild(descriptionElement);
@@ -150,9 +154,17 @@
                 titleElement.style.fontSize = '2.3em';
                 titleElement.style.marginTop = '0';
                 titleElement.style.marginBottom = '0.5em';
+                // titleElement.style.textAlign = 'center';
+                // titleElement.style.marginTop = 'auto';
+                // titleElement.style.marginBottom = 'auto';
+
 
                 descriptionElement.style.fontSize = '1.8em';
                 descriptionElement.style.marginTop = '0.5em';
+                // descriptionElement.style.textAlign = 'center';
+                // descriptionElement.style.marginTop = 'auto';
+                // descriptionElement.style.marginBottom = 'auto';
+
 
                 projectDetailDisplay.appendChild(imageElement);
 
@@ -238,7 +250,7 @@
         <p class="tech_strong">Strong</p>
         <p class="tech_strong_contents">
             Java / Spring / JSP / MySQL / C / C++ / React.js / HTML5 / CSS / R-Studio / Bootstrap
-            / JavaScript / Kotlin 
+            / JavaScript / Kotlin / C# / ASP.NET / Azure
         </p>
         <p class="tech_knowledgeable">Knowledgeable</p>
         <p class="tech_knowledgeable_contents">

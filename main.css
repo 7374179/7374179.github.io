@@ -468,8 +468,6 @@ a.project-content {
 
 @media all and (max-width: 660px) {
   .nav {
-    /* display: grid;
-    grid-template-columns: auto; */
     align-items: center;
     font-size: 1em;
     justify-content: center;
