@@ -15,7 +15,6 @@ body {
   /* font-family: 'Im혜민',serif;
   color: #000 */
   font-family: 'Roboto Slab', serif;
-  background-color: rgb(248, 245, 245);
 }
 
 hr {
@@ -66,6 +65,11 @@ ul {
   height: 70px;
 }
 
+.nav a {
+  /* margin: 0px; */
+  /* font-size: 20px; */
+}
+
 .nav-name {
   display: flex;
   justify-content: center;
@@ -104,14 +108,14 @@ ul {
 }
 
 .nav-menu .nav-git{
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .nav-menu .nav-in{
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
-/* .no-link,
+.no-link,
 .no-link:focus,
 .no-link:hover,
 .project-content:focus,
@@ -119,7 +123,7 @@ ul {
 a.project-content {
   background-image: none;
   text-shadow: none
-} */
+}
 
 .article {
   padding: 5em 0;
@@ -257,107 +261,190 @@ a.project-content {
   margin-right: 10px; 
 }
 
+/* .projects-container {
+  height: 520px;
+  background-color: rgb(248, 245, 245);
+  padding-top: 10px
+} */
 .projects-container {
-  max-width: 1200px; 
-  margin: 0 auto;
+  max-width: 1200px; /* or however wide you want your container to be */
+  margin: 0 auto; /* center the container */
   padding-top: 10px;
-  /* background-color: rgb(248, 245, 245); */
+  background-color: rgb(248, 245, 245);
 }
+
+
+/* .projects {
+  display: flex;
+  clear: both;
+  position: relative;
+  margin-bottom: 20px;
+  justify-content: center;
+} */
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* creates a responsive grid with columns of minimum 300px and maximum 1fr */
+  gap: 20px; /* space between grid items */
+  justify-content: center; /* center grid items horizontally */
+  align-items: start; /* align grid items to the start vertically */
 }
 
+/* .project {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+  border: 1px solid #000000;
+  margin-top: 20px;
+  background-color: white;
+} */
 .project {
   display: flex;
-  height: 450px;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #989898;
-  padding: 20px;
-  padding-bottom: 0px;
-  border-radius: 10px;
+  flex-direction: column; /* stack children vertically */
+  align-items: center; /* center children horizontally */
+  text-align: center; /* center text */
 }
 
+/* .projects:after {
+  content: ""
+} */
+
+/* .project.active .project-content,
+.project:not(.no-hover):hover .project-content {
+  background-color: rgba(0, 0, 0, .5);
+  position: relative
+} */
+
+/* .project.active .project-image,
+.project:not(.no-hover):hover .project-image {
+  filter: blur(3px);
+  -webkit-filter: blur(3px)
+} */
+
+/* .project-circle,
 .project-image {
-  width: 100%;
-  height: 350px;
-  /* height: auto; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 0
+} */
+
+/* .project-image {
+  background-size: contain;
+  background-position: center;
+} */
+.project-image {
+  /* width: 100%;
+  height: auto; */
   background-size: cover;
   background-position: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* space between image and text */
+  /* border: 1px solid #000000; */
+}
+
+
+/* .project-detail-display {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.project-detail-display .project-image {
+  width: 400px;
+  height: 500px;
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+
+.project-detail-display.active {
+  display: block;
+}
+
+/* .project .project-circle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .4);
+  height: 250px;
+  width: 250px;
+} */
+
+.project-content {
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+  /* width: 80px;
+  height: 80px; */
   border: 1px solid #000000;
 }
 
-.project-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; /* 또는 space-between */
-  text-align: center;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  height: 100%; /* 컨테이너의 전체 높이를 사용하도록 설정 */
+.project-detail-display .project-content-display {
+  display: block;
 }
 
-.code-app {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  /* margin-top: 20px; */
+.no-link,
+.no-link:focus,
+.no-link:hover,
+.project-content:focus,
+.project-content:hover,
+a.project-content {
+  background-image: none;
+  text-shadow: none
 }
-
-.code-app .code, .code-app .app {
-  /* padding: 8px 16px;  */
-  border: 1px solid #cecece;
-  border-radius: 4px;
-  /* background-color: #888d89; */
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  /* text-decoration: none; */
-  font-weight: bold;
-  width: 130px;
-  align-items: center;
-  /* text-decoration: underline red; */
-  font-size: 1.3em;
-}
-
-.code-app .code:hover, .code-app .app:hover {
-  color: red; /* Darker shade when hovered */
-}
-
-/* You may need to add a class to your <div> elements or change them to <a> if they are links */
 
 .project-title {
-  font-size: 2em;
-  margin: 0;
+  font-size: 0.5em;
+  margin: .25em 0;
   text-align: center;
-  /* color: #fff; */
-  /* overflow-y: hidden */
+  color: #fff;
+  overflow-y: hidden
 }
 
+.project-underline {
+  border-top: 2px solid #fff;
+  display: block;
+  width: 0;
+  margin: 11px auto;
+  position: relative
+}
+
+.project.active .project-underline,
+.project:not(.no-hover):hover .project-underline {
+  width: 4.5em;
+}
+
+.project.active,
+.project.active .project-title span,
+.project:not(.no-hover):hover,
+.project:not(.no-hover):hover .project-title span {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0)
+}
 
 .project-description {
-  /* display: none; */
-  /* margin-top: 20px; */
-  width: 100%;
-  text-align: center;
-  font-size: 0.9em;
+  display: none;
+  /* width: 100%; */
   /* font-size: 0.5vw; */
-}
-
-.lang {
-  margin: 0;
-  font-size: 1.3em;
-  font-weight: 800;
-  /* margin-bottom: 20px; */
-  word-spacing: 8px; /* 원하는 간격으로 조정 */
-
 }
 
 
@@ -437,9 +524,9 @@ a.project-content {
     font-size: 1.5em
   }
 
-  /* .projects-container {
+  .projects-container {
     height: 150px;
-  } */
+  }
 
   .article {
     font-size: 1em

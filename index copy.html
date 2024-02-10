@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taehyuk Chung > Portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://coreui.io/css/all.min.04afe194583853dbc897278f1cd35603f76521c9272735b5c39cc8a10f3e6adf.css" rel="stylesheet" > -->
+
+</head>
+
+<body>
+    <div class='nav'>
+        <p class='nav-name'><a href="#">Taehyuk Chung <span class="logo-end1"> ></span><span class="logo-end2">_</span></a></p>
+        <ul class='nav-menu'>
+            <li><a href="#proj">Creations</a></li>
+            <li><a href="#about">Who I Am</a></li>
+            <li><a href="#tech">Skills</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="https://blog.naver.com/7374179" target="_blank">Blog</a></li>
+            <li class="nav-git"><a href="https://github.com/7374179" target="_blank" class="no-link"><i class="fab fa-github"></i></a>
+            <li class="nav-in"><a href="https://www.linkedin.com/in/taehyuk-chung-952561252/" target="_blank" class="no-link"><i class="fab fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="article">
+        <p class="article-mid1">Hi, I'm <b class="article-name">Taehyuk Chung</b></p>
+        <p class="article-mid2">who converts construction insight into innovative coding</p>
+    </div>
+
+    <div class="projects-container" id="proj">
+        <div class="project-detail-display" id="projectDetailDisplay"></div>
+        <ul class="projects" data-anchor="projects" id="projects">
+            <li class="project project-1 ripple load-bg" data-project-id="project1">
+                <div class="project-image"></div>
+                <a href="https://github.com/7374179/COMP1800_2022_Fall/tree/main/1800_202230_BBY23"
+                    class="project-content" target="_blank">
+                    <h3 class="project-title"><span>Teachering</span></h3>
+                    <span class="project-underline"></span>
+                    <div class="project-description"><span>This web application is <strong>designed to
+                                assist<br> students</strong> who need help at school to<br> enhancetheir academic
+                            lifestyle.</span></div>
+                </a>
+            </li>
+            <li class="project project-2 ripple load-bg" data-project-id="project2">
+                <div class="project-image"></div>
+                <a href="https://github.com/7374179/COMP2800_2023_Winter-BBY25" class="project-content" target="_blank">
+                    <h3 class="project-title"><span>KitchenGenie</span></h3>
+                    <span class="project-underline"></span>
+                    <div class="project-description"><span>It is a web application that utilizes <strong>AI
+                                technology</strong><br>
+                            to <strong>simplify meal planning and preparation</strong><br>
+                            by suggesting recipes based on <strong>ingredients<br>
+                                available at home</strong>.</span></div>
+                </a>
+            </li>
+            <li class="project project-3 ripple load-bg" data-project-id="project3">
+                <div class="project-image"></div>
+                <a href="https://github.com/7374179/COMP2522_2023_Winter/tree/main/05.%20Game/project-space-invaders"
+                    class="project-content" target="_blank">
+                    <h3 class="project-title"><span>Space Invader</span></h3>
+                    <span class="project-underline"></span>
+                    <div class="project-description"><span><strong>Defend the galaxy!</strong><br> Play 'Space Invader'
+                            now!!</span></div>
+                </a>
+            </li>
+            <li class="project project-4 ripple load-bg" data-project-id="project4">
+                <div class="project-image"></div>
+                <a href="https://github.com/7374179/Board-for-JavaSpring" class="project-content" target="_blank">
+                    <h3 class="project-title"><span>
+                            <stong>Community Board</stong>
+                        </span></h3>
+                    <span class="project-underline"></span>
+                </a>
+                <div class="project-description">
+                    <span>이 앱은 무슨 목적과 기능에 대한 것임<br>
+                        사용언어는 자바랑 어쩌구임하하하하하하하<br>
+                        체험!<br>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 스크립트 없애고 css로 바꿔보쟈!!-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var firstProject = document.querySelector('.project');
+            if (firstProject) {
+                firstProject.dispatchEvent(new Event('mouseover'));
+            }
+        });
+
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', function () {
+                const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+
+                if (window.matchMedia("(max-width: 660px)").matches) {
+                    projectDetailDisplay.style.display = 'none';
+                    return;
+                } else {
+                    projectDetailDisplay.style.display = 'block';
+                }
+
+                const defaultImage = document.getElementById('defaultImage');
+                if (defaultImage) {
+                    defaultImage.style.display = 'none';
+                }
+
+                projectDetailDisplay.innerHTML = '';
+                projectDetailDisplay.style.height = '400px';
+                projectDetailDisplay.style.width = '100%';
+
+                const bgImageStyle = window.getComputedStyle(this.querySelector('.project-image')).backgroundImage;
+                const bgImageUrl = bgImageStyle.slice(4, -1).replace(/"/g, ""); // "url()" 부분 제거
+
+                const imageElement = document.createElement('img');
+                imageElement.src = bgImageUrl;
+                imageElement.alt = "Project Image";
+                imageElement.style.maxHeight = '100%';
+                imageElement.style.objectFit = 'contain';
+                imageElement.style.border = '1px solid black';
+                imageElement.style.borderRadius = '10px'; // 이미지를 둥글게 하는 스타일 추가
+                imageElement.style.marginRight = '20px'; // 오른쪽에 20px 간격을 줍니다.
+
+                imageElement.style.flex = '1'; // 이미지가 차지하는 공간 설정
+                imageElement.style.maxWidth = '50%'; // 이미지의 최대 가로 폭 설정
+
+
+                const detailsContainer = document.createElement('div');
+                detailsContainer.style.paddingTop = '0px';
+                detailsContainer.style.textAlign = 'center';
+                detailsContainer.style.marginTop = 'auto';
+                detailsContainer.style.marginBottom = 'auto';
+                detailsContainer.style.paddingLeft = '20px'; // 왼쪽에 20px 간격을 줍니다.
+
+                detailsContainer.style.flex = '1'; // 상세 설명이 차지하는 공간 설정
+                detailsContainer.style.maxWidth = '50%'; // 상세 설명의 최대 가로 폭 설정
+
+                const titleElement = document.createElement('h3');
+                const descriptionElement = document.createElement('p');
+                titleElement.textContent = this.querySelector('.project-title span').textContent;
+                descriptionElement.innerHTML = this.querySelector('.project-description span').innerHTML;
+
+                detailsContainer.appendChild(titleElement);
+
+
+                detailsContainer.appendChild(descriptionElement);
+
+                titleElement.style.fontSize = '2.3em';
+                titleElement.style.marginTop = '0';
+                titleElement.style.marginBottom = '0.5em';
+
+                descriptionElement.style.fontSize = '1.8em';
+                descriptionElement.style.marginTop = '0.5em';
+
+                projectDetailDisplay.style.margin = 'auto';
+                projectDetailDisplay.style.display = 'flex';
+                projectDetailDisplay.style.alignItems = 'center'; // 요소들을 중앙에 정렬합니다.
+                projectDetailDisplay.style.justifyContent = 'center'; // 요소들을 중앙에 배치합니다.
+                projectDetailDisplay.classList.add('active');
+                projectDetailDisplay.style.flexDirection = 'row'; // 가로 방향으로 배치합니다.
+                projectDetailDisplay.style.maxWidth = '1000px';
+                projectDetailDisplay.appendChild(imageElement);
+                projectDetailDisplay.appendChild(detailsContainer);
+            });
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (!this.getAttribute('href').startsWith('#')) {
+                    return;
+                }
+
+                e.preventDefault();
+
+                let target = document.querySelector(this.getAttribute('href'));
+                const navBarHeight = 90;
+
+                const offsetPosition = target ? target.offsetTop - navBarHeight : 0;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function updateProjectDetails() {
+            const projectDetailDisplay = document.getElementById('projectDetailDisplay');
+            const firstProject = document.querySelector('.project');
+
+            if (window.innerWidth <= 660) {
+                projectDetailDisplay.style.display = 'none';
+            } else {
+                projectDetailDisplay.style.display = 'block';
+
+                if (firstProject) {
+                    firstProject.dispatchEvent(new Event('mouseover'));
+                }
+            }
+        }
+
+        window.addEventListener('resize', updateProjectDetails);
+        window.addEventListener('resize', adjustFontSize);
+        document.addEventListener('DOMContentLoaded', adjustFontSize);
+
+        updateProjectDetails();
+    </script>
+
+    <div class="about" id="about">
+        <p class="about_title">Who I Am<span class="logo-end1"> ></span></p>
+        <p class="about-intro">
+            With a unique background combining 10 years of experience in the construction industry
+            and a passion for computer science,
+            I have embraced various challenges. In the construction company,
+            I was involved in risk management and site management in Korea, UAE, Iraq.</p>
+        <p class="about-intro">
+            After transitioning to computer science,
+            I immersed myself in intensive studies, completing 120 credits,
+            and solved hundreds of problems on coding challenge platforms, enhancing my technical skills.
+            This journey has provided me with the ability to effectively solve complex problems
+            and the flexibility to adapt to diverse environments.
+        </p>
+    </div>
+
+    <div class="tech" id="tech">
+        <p class="tech_title">Skills<span class="logo-end1"> ></span></p>
+        <p class="tech_strong">Strong</p>
+        <p class="tech_strong_contents">
+            Java / Spring / JSP / MySQL / C / C++ / React.js / HTML5 / CSS / R-Studio / Bootstrap
+            / JavaScript / Kotlin / C# / ASP.NET / Azure
+        </p>
+        <p class="tech_knowledgeable">Knowledgeable</p>
+        <p class="tech_knowledgeable_contents">
+            Node.js / Express.js / MongoDB / JSF / JQuery / FirebaseDB / Python
+        </p>
+        <p class="etc">ETC</p>
+        <p class="etc_contents">
+            Git /
+        </p>
+    </div>
+
+    <div class="awards" id="awards">
+        <p class="awards_title">Award<span class="logo-end1"> ></span></p>
+        <p class="awards_contents">100 Days Badge for Consistency <img src="./imgs/2023-100.gif" alt="100 Days Badge"
+                class="award-badge" width="35px">
+        </p>
+        <p class="awards_contents-detail">23.12.16 / Daily Commitment / Leetcode</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+</body>
+
+</html>
