@@ -157,6 +157,7 @@ a.project-content {
   margin: 0 auto;
   margin-bottom: 150px;
   clear: both;
+  padding-top: 60px;
 }
 
 .about_title {
@@ -185,6 +186,7 @@ a.project-content {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 150px;
+  padding-top: 60px;
 }
 
 .tech_title {
@@ -222,7 +224,8 @@ a.project-content {
 
 .awards {
   max-width: 800px;
-  margin: 0 auto
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
 .awards_title {
@@ -260,7 +263,8 @@ a.project-content {
 .projects-container {
   max-width: 1200px; 
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 80px;
+  margin-top: 65px;;
   /* background-color: rgb(248, 245, 245); */
 }
 
@@ -272,15 +276,24 @@ a.project-content {
   align-items: start;
 }
 
+/* .projects:hover {
+  cursor: pointer;
+} */
+
 .project {
   display: flex;
   height: 450px;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #989898;
+  border: 1px solid #c0bfbf;
   padding: 20px;
   padding-bottom: 0px;
   border-radius: 10px;
+}
+
+.project:hover {
+  /* cursor: pointer; */
+  border: 1px solid black;
 }
 
 .project-image {
@@ -324,17 +337,18 @@ a.project-content {
   width: 130px;
   align-items: center;
   /* text-decoration: underline red; */
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .code-app .code:hover, .code-app .app:hover {
-  color: red; /* Darker shade when hovered */
+  /* color: red; */
+  border: 1px solid black;
 }
 
 /* You may need to add a class to your <div> elements or change them to <a> if they are links */
 
 .project-title {
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0;
   text-align: center;
   /* color: #fff; */
@@ -348,6 +362,7 @@ a.project-content {
   width: 100%;
   text-align: center;
   font-size: 0.9em;
+  color: #797979;
   /* font-size: 0.5vw; */
 }
 
@@ -382,7 +397,7 @@ a.project-content {
   background-image: url(./imgs/25212_1.gif)
 } */
 
-@media all and (max-width: 923px) {
+@media all and (max-width: 768px) {
 
   .nav {
     /* display: grid;
@@ -418,7 +433,7 @@ a.project-content {
   }
 }
 
-@media all and (max-width: 660px) {
+@media all and (max-width: 480px) {
   .nav {
     align-items: center;
     font-size: 1em;
@@ -513,212 +528,6 @@ a.project-content {
 
   .awards_contents-detail {
     font-size: 1em;
-    margin-bottom: 15px;
-  }
-}
-
-@media all and (max-width: 570px) {
-  .article {
-    font-size: 1em
-  }
-
-  .about {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    clear: both;
-  }
-
-  .about_title {
-    font-size: 3em;
-    font-weight: 800;
-    margin-bottom: 50px;
-    position: relative;
-  }
-
-  .about-intro {
-    font-size: 1.2em;
-  }
-
-  .tech {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    clear: both;
-  }
-
-  .tech_title {
-    font-size: 3em;
-    font-weight: 800;
-    margin-bottom: 15px;
-    position: relative;
-  }
-
-  .tech_strong,
-  .tech_knowledgeable,
-  .etc {
-    font-size: 1.8em;
-    font-weight: 800;
-    margin-bottom: 15px;
-  }
-
-  .tech_strong_contents,
-  .tech_knowledgeable_contents,
-  .etc_contents {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-
-  .awards {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    clear: both;
-  }
-
-  .awards_title {
-    font-size: 3em;
-    font-weight: 800;
-    position: relative;
-  }
-
-  .awards_contents {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-  }
-
-  .awards_contents-detail {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-}
-
-@media all and (max-width: 400px) {
-  .nav {
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    padding-left: 70px;
-  }
-
-  .nav-name {
-    font-size: 1.2em;
-  }
-
-  .article {
-    padding: 5em 0;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    margin-top: 10px;
-  }
-
-  .about {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    clear: both;
-  }
-
-  hr {
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
-
-  .about_title {
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 50px;
-    position: relative;
-  }
-
-  .about-intro {
-    font-size: 1.1em;
-  }
-
-  .projects-container{
-    height: auto;
-    padding-bottom: 10px;
-  }
-
- 
-  .project {
-    display: table;
-    width: 90%;
-    height: 200px;
-  }
-
-  .project-content {
-    display: table-cell;
-    vertical-align: middle;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-  }
-
-  .project-title{
-    font-size: 1em;
-  }
-
-  .projects {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;      
-  }
-
-  .tech {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    clear: both;
-  }
-
-  .tech_title {
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 10px;
-    position: relative;
-  }
-
-  .tech_strong,
-  .tech_knowledgeable,
-  .etc {
-    font-size: 1.5em;
-    font-weight: 800;
-    margin-bottom: 15px;
-  }
-
-  .tech_strong_contents,
-  .tech_knowledgeable_contents,
-  .etc_contents {
-    font-size: 0.8em;
-    margin-bottom: 15px;
-  }
-
-  .awards {
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    clear: both;
-  }
-
-  .awards_title {
-    font-size: 2em;
-    font-weight: 800;
-    position: relative;
-  }
-
-  .awards_contents {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-
-  .awards_contents-detail {
-    font-size: 0.8em;
     margin-bottom: 15px;
   }
 }
