@@ -111,16 +111,6 @@ ul {
   margin-left: 10px;
 }
 
-/* .no-link,
-.no-link:focus,
-.no-link:hover,
-.project-content:focus,
-.project-content:hover,
-a.project-content {
-  background-image: none;
-  text-shadow: none
-} */
-
 .article {
   padding: 5em 0;
   text-align: center;
@@ -130,7 +120,6 @@ a.project-content {
   padding-top: 100px;
   padding-bottom: 100px;
   margin-top: 100px;
-  /* border: 1px solid black; */
 }
 
 .article-name {
@@ -144,13 +133,8 @@ a.project-content {
 }
 
 .article-mid2 {
-  /* font-size: 1.4em; */
   margin-top: 5px;
 }
-
-/* .article-mid {
-  margin: 25px;
-} */
 
 .about {
   max-width: 800px;
@@ -294,6 +278,7 @@ a.project-content {
 .project:hover {
   /* cursor: pointer; */
   border: 1px solid black;
+  background-color: rgb(250, 248, 250);
 }
 
 .project-image {
@@ -310,11 +295,11 @@ a.project-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; /* 또는 space-between */
+  justify-content: space-evenly;
   text-align: center;
   padding-bottom: 0;
   margin-bottom: 0;
-  height: 100%; /* 컨테이너의 전체 높이를 사용하도록 설정 */
+  height: 100%;
 }
 
 .code-app {
@@ -345,8 +330,6 @@ a.project-content {
   border: 1px solid black;
 }
 
-/* You may need to add a class to your <div> elements or change them to <a> if they are links */
-
 .project-title {
   font-size: 1.8em;
   margin: 0;
@@ -371,7 +354,7 @@ a.project-content {
   font-size: 1.3em;
   font-weight: 800;
   /* margin-bottom: 20px; */
-  word-spacing: 8px; /* 원하는 간격으로 조정 */
+  word-spacing: 8px;
 
 }
 
@@ -392,10 +375,6 @@ a.project-content {
 .project-4.load-bg .project-image {
   background-image: url(./imgs/board.gif);
 }
-
-/* .project-5.load-bg .project-image {
-  background-image: url(./imgs/25212_1.gif)
-} */
 
 @media all and (max-width: 768px) {
 
