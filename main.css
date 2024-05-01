@@ -355,10 +355,7 @@ ul {
   font-weight: 800;
   /* margin-bottom: 20px; */
   word-spacing: 8px;
-
 }
-
-
 
 .project-1.load-bg .project-image {
   background-image: url(./imgs/1800_1.gif)
@@ -378,6 +375,10 @@ ul {
 
 .project-5.load-bg .project-image {
   background-image: url(./imgs/4870.png);
+}
+
+.project-6.load-bg .project-image {
+  background-image: url(./imgs/prj6.png);
 }
 
 @media all and (max-width: 768px) {
